@@ -1,0 +1,12 @@
+
+language: node_js
+node_js:
+  - 13
+
+script:
+  - docker build -t simple-node
+  - docker tag simple-node systane/simple-node:latest
+
+after_success:
+  - docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push docker push systane/simple-node
