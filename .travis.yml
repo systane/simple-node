@@ -4,7 +4,7 @@ node_js:
   - 13
 
 script:
-  - docker build -t simple-node
+  - docker build -t simple-node .
   - docker tag simple-node systane/simple-node:latest
 
 after_success:
