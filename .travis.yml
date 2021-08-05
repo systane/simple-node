@@ -9,4 +9,4 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push docker push systane/simple-node
+  - docker push systane/simple-node
